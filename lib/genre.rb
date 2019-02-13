@@ -13,7 +13,7 @@ class Genre
     #iterates through songs that belong to that genre 
   end
   def artists
-    songs.map {|song| song.artist}
+    songs.map {|song| song.genre}
   
   # iterates over Genre's collection of songs and collects the artist that owns each song
   end 
