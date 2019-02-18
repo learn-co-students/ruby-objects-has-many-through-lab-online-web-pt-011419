@@ -13,8 +13,8 @@ class Patient
     @@all
   end
 
-  def new_appointment(date, doctor)
-    Appointment.new(date, self, doctor)
+  def new_appointment(doctor, date)
+    Appointment.new(self, doctor, date)
 
   end
 
@@ -32,10 +32,5 @@ class Patient
     end
   end
 
-  # def genres
-  #   songs.collect do |song|
-  #     song.genre
-  #   end
-  # end
 
 end
