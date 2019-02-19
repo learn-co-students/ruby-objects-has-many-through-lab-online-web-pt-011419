@@ -14,8 +14,8 @@
     @@all
   end 
   
-  def new_appointment(date, patient)
-    appointment = Appointment.new(patient, self, date)
+  def new_appointment(patient, date)
+    appointment = Appointment.new(date, self, patient)
     appointment
   end 
   
@@ -24,7 +24,6 @@
   end 
   
   def patients 
-    binding.pry
     self.appointments.map {|a| a.patient}
   end 
   
