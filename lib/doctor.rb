@@ -22,4 +22,8 @@
     Appointment.all.select {|a| a.doctor == self}
   end 
   
+  def patients 
+    self.appointments.map {|a| a.patient}
+  end 
+  
 end 
