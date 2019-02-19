@@ -1,3 +1,4 @@
+  require 'pry'
   class Doctor 
   
   attr_accessor :name
@@ -14,7 +15,7 @@
   end 
   
   def new_appointment(date, patient)
-    appointment = Appointment.new(date, patient, self)
+    appointment = Appointment.new(patient, self, date)
     appointment
   end 
   
@@ -23,6 +24,7 @@
   end 
   
   def patients 
+    binding.pry
     self.appointments.map {|a| a.patient}
   end 
   
