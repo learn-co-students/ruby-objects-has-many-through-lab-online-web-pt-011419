@@ -9,8 +9,12 @@
     @@all << self
   end 
   
-  def all 
+  def self.all 
     @@all
   end 
   
+  def new_appointment(date, patient)
+    appointment = Appointment.new(date, patient, doctor)
+    appointment
+  end 
 end 
