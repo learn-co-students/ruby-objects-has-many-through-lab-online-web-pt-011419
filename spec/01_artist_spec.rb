@@ -1,4 +1,5 @@
 require "spec_helper"
+require 'pry'
 
 
 describe "Artist" do
@@ -29,6 +30,7 @@ describe "Artist" do
       nerd_rock = Genre.new("Nerd Rock")
       ninety_nine_problems = Song.new("Ninety Nine Problems", jay_z, rap)
       particle_man = Song.new("Particle Man", tmbg, nerd_rock)
+
 
       expect(jay_z.songs).to include(ninety_nine_problems)
       expect(jay_z.songs).not_to include(particle_man)
